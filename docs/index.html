@@ -1,0 +1,83 @@
+
+    
+    
+    <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wikidata Bib</title>
+    <meta property="og:description" content="powered by Wikidata" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half has-text-centered">
+                    <h2 class="title is-2">Overview of the Natal Bioinformatics Forum 2023</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+     <div class="has-text-centered">
+    
+    
+    
+    
+    
+    
+    
+     <h3  class="title is-3">  Co-author Graph for the Natal Bioinformatics Forum 2023 </h2>
+<iframe style="width: 80%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23%23%20tool%3A%20scholia%0A%23title%3A%20Co-author%20Graph%20for%20the%20Natal%20Bioinformatics%20Forum%202023%0A%23Based%20on%20code%20at%20https%3A%2F%2Fscholia.toolforge.org%2Fevent%2FQ116259311%20%0A%23defaultView%3AGraph%0A%0APREFIX%20target%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ116259311%3E%0A%0ASELECT%20%0A%20%20%3Fauthor1%20%3Fauthor1Label%20%28SAMPLE%28%3Fimage1_%29%20AS%20%3Fimage1%29%20%3Frgb%0A%20%20%3Fauthor2%20%3Fauthor2Label%20%28SAMPLE%28%3Fimage2_%29%20AS%20%3Fimage2%29%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20%3Fauthor1%0A%20%20%20%20%28SAMPLE%28%3Fdark_rgb_%29%20AS%20%3Fdark_rgb%29%0A%20%20%20%20%28SAMPLE%28%3Flight_rgb_%29%20AS%20%3Flight_rgb%29%0A%20%20WHERE%20%7B%0A%20%20%20%20%23%20Find%20people%20at%20the%20event%0A%20%20%20%20%7B%20%0A%20%20%20%20%20%20target%3A%20%28wdt%3AP823%20%7C%20wdt%3AP664%20%7C%20%5Ewdt%3AP1344%20%7C%20wdt%3AP710%29%20%3Fauthor1%20.%0A%20%20%20%20%20%20BIND%20%28%22EEEEEE%22%20AS%20%3Fdark_rgb_%29%0A%20%20%20%20%7D%0A%20%20%20%20UNION%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20author%20of%20article%20in%20proceedings%2C%20or%20program%20committee%20member%0A%20%20%20%20%20%20target%3A%20%20%28%5Ewdt%3AP4745%20%2F%20%5Ewdt%3AP1433%20%2F%20wdt%3AP50%29%20%7C%20wdt%3AP5804%20%3Fauthor1%20.%0A%20%20%20%20%20%20BIND%20%28%22FFFFFF%22%20AS%20%3Flight_rgb_%29%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20GROUP%20BY%20%3Fauthor1%0A%7D%20AS%20%25authors%0AWITH%20%7B%0A%20%20SELECT%20DISTINCT%20%3Fauthor1%20%3Fauthor2%20%3Frgb%20WHERE%20%7B%0A%20%20%20%20INCLUDE%20%25authors%0A%20%20%20%20target%3A%20%28wdt%3AP823%20%7C%20wdt%3AP664%20%7C%20%5Ewdt%3AP1344%20%7C%20wdt%3AP710%20%7C%20%5Ewdt%3AP4745%20%2F%20%5Ewdt%3AP1433%20%2F%20wdt%3AP50%29%20%20%3Fauthor2%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%23%20Find%20co-authors%0A%20%20%20%20%3Fwork%20wdt%3AP50%20%3Fauthor1%20%2C%20%3Fauthor2%20.%0A%20%20%20%20FILTER%20%28%3Fauthor1%20%21%3D%20%3Fauthor2%29%0A%0A%20%20%20%20BIND%28COALESCE%28%3Fdark_rgb%2C%20%3Flight_rgb%29%20AS%20%3Frgb%29%0A%20%20%7D%0A%7D%20AS%20%25result%0AWHERE%20%7B%0A%20%20INCLUDE%20%25result%0A%20%20%20%20%0A%20%20OPTIONAL%20%7B%20%3Fauthor1%20wdt%3AP18%20%3Fimage1_%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fauthor2%20wdt%3AP18%20%3Fimage2_%20.%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2Cda%2Cde%2Ces%2Cfr%2Cjp%2Cnl%2Cno%2Csv%2Cru%2Czh%22.%0A%20%20%7D%0A%7D%0AGROUP%20BY%20%3Fauthor1%20%3Fauthor1Label%20%3Frgb%20%3Fauthor2%20%3Fauthor2Label%20%20" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+ <h3  class="title is-3">  Topics of works authored by people associated with the event </h2>
+<iframe style="width: 80%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23%23%20tool%3A%20scholia%0A%23title%3A%20Topics%20of%20works%20authored%20by%20people%20associated%20with%20the%20event%0A%0APREFIX%20target%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ116259311%3E%0A%0ASELECT%20%3Fscore%20%3Ftopic%20%3FtopicLabel%20%3FtopicDescription%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20DISTINCT%20%3Fperson%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20speaker%2C%20organizer%2C%20program%20committee%20member%0A%20%20%20%20%20%20target%3A%20wdt%3AP823%20%7C%20wdt%3AP664%20%7C%20wdt%3AP5804%20%3Fperson%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20participant%0A%20%20%20%20%20%20%3Fperson%20wdt%3AP1344%20%7C%20%5Ewdt%3AP710%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20author%0A%20%20%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP1433%20%2F%20wdt%3AP4745%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%20AS%20%25people%20%20%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20%28SUM%28%3Fscore_%29%20AS%20%3Fscore%29%20%3Ftopic%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20target%3A%20wdt%3AP921%20%3Ftopic%20.%0A%20%20%20%20%20%20BIND%2850%20AS%20%3Fscore_%29%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20INCLUDE%20%25people%0A%20%20%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP921%20%3Ftopic%20.%0A%20%20%20%20%20%20BIND%281%20AS%20%3Fscore_%29%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20target%3A%20%5Ewdt%3AP4745%20%2F%20%5Ewdt%3AP1433%20%2F%20wdt%3AP921%20%3Ftopic%20.%0A%20%20%20%20%20%20BIND%287%20AS%20%3Fscore_%29%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20GROUP%20BY%20%3Ftopic%0A%7D%20AS%20%25results%0AWHERE%20%7B%0A%20%20INCLUDE%20%25results%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0AORDER%20BY%20DESC%28%3Fscore%29%0ALIMIT%2020%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+ <h3  class="title is-3">  software used  by people associated with an event  </h2>
+<iframe style="width: 80%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23%23%20tool%3A%20scholia%0A%23defaultView%3ABubbleChart%0A%23title%3A%20software%20used%20%20by%20people%20associated%20with%20an%20event%20%0A%23Modified%20from%20Scholia%29%0A%0APREFIX%20target%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ116259311%3E%0A%0ASELECT%0A%20%20%3Fnumber_of_persons%0A%20%20%3Fuse%20%3FuseLabel%20%28CONCAT%28%22%2Fuse%2F%22%2C%20SUBSTR%28STR%28%3Fuse%29%2C%2032%29%29%20AS%20%3FuseUrl%29%20%3FuseDescription%0A%20%20%3Fexample_person%20%3Fexample_personLabel%20%28CONCAT%28%22%2Fauthor%2F%22%2C%20SUBSTR%28STR%28%3Fexample_person%29%2C%2032%29%29%20AS%20%3Fexample_personUrl%29%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20DISTINCT%20%3Fperson%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20speaker%2C%20organizer%2C%20program%20committee%20member%0A%20%20%20%20%20%20target%3A%20wdt%3AP823%20%7C%20wdt%3AP664%20%7C%20wdt%3AP5804%20%3Fperson%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20participant%0A%20%20%20%20%20%20%3Fperson%20wdt%3AP1344%20%7C%20%5Ewdt%3AP710%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20author%0A%20%20%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP1433%20%2F%20wdt%3AP4745%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%20AS%20%25people%20%20%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20%28COUNT%28DISTINCT%20%3Fperson%29%20AS%20%3Fnumber_of_persons%29%0A%20%20%20%20%3Fuse%0A%20%20%20%20%28SAMPLE%28%3Fperson%29%20AS%20%3Fexample_person%29%0A%20%20WHERE%20%7B%0A%20%20%20%20INCLUDE%20%25people%0A%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP4510%20%3Fuse%20.%0A%20%20%20%20%3Fuse%20wdt%3AP31%2Fwdt%3AP279%2A%20wd%3AQ7397%20.%20%0A%20%20%7D%0A%20%20GROUP%20BY%20%3Fuse%0A%7D%20AS%20%25results%0AWHERE%20%7B%0A%20%20INCLUDE%20%25results%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cda%2Cde%2Ces%2Cfr%2Cjp%2Cno%2Cru%2Csv%2Czh%22.%20%7D%0A%7D%0AORDER%20BY%20DESC%28%3Fnumber_of_persons%29%0ALIMIT%2020%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+ <h3  class="title is-3">  Software-Speaker Graph </h2>
+<iframe style="width: 80%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23%23%23%20tool%3A%20scholia%0A%23defaultView%3AGraph%0A%23title%3A%20Software-Speaker%20Graph%0A%0APREFIX%20target%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ116259311%3E%0A%0ASELECT%20DISTINCT%0A%20%20%3Fuse%20%3FuseLabel%20%3Frgb%0A%20%20%3Fperson%20%3FpersonLabel%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20DISTINCT%20%3Fperson%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20speaker%2C%20organizer%2C%20program%20committee%20member%0A%20%20%20%20%20%20target%3A%20wdt%3AP823%20%7C%20wdt%3AP664%20%7C%20wdt%3AP5804%20%3Fperson%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20participant%0A%20%20%20%20%20%20%3Fperson%20wdt%3AP1344%20%7C%20%5Ewdt%3AP710%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20author%0A%20%20%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP1433%20%2F%20wdt%3AP4745%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%20AS%20%25people%20%20%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20%3Fuse%20%3Fperson%0A%20%20WHERE%20%7B%0A%20%20%20%20INCLUDE%20%25people%0A%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP4510%20%3Fuse%20.%0A%20%20%20%20%3Fuse%20wdt%3AP31%2Fwdt%3AP279%2A%20wd%3AQ7397%20.%20%0A%20%20%7D%0A%7D%20AS%20%25results%0AWHERE%20%7B%0A%20%20INCLUDE%20%25results%0A%20%20BIND%28%22B5651D%22%20AS%20%3Frgb%29%0A%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cda%2Cde%2Ces%2Cfr%2Cjp%2Cno%2Cru%2Csv%2Czh%22.%20%7D%0A%7D%0ALIMIT%20200%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+ <h3  class="title is-3">  R or Python? Who published papers with software written in each? </h2>
+<iframe style="width: 80%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23%23%20tool%3A%20scholia%0A%23defaultView%3AGraph%0A%23title%3A%20R%20or%20Python%3F%20Who%20published%20papers%20with%20software%20written%20in%20each%3F%0A%0APREFIX%20target%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ116259311%3E%0A%0ASELECT%20DISTINCT%0A%20%20%3Fprogramming_language%20%3Fprogramming_languageLabel%20%3Frgb%0A%20%20%3Fperson%20%3FpersonLabel%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20DISTINCT%20%3Fperson%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20speaker%2C%20organizer%2C%20program%20committee%20member%0A%20%20%20%20%20%20target%3A%20wdt%3AP823%20%7C%20wdt%3AP664%20%7C%20wdt%3AP5804%20%3Fperson%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20participant%0A%20%20%20%20%20%20%3Fperson%20wdt%3AP1344%20%7C%20%5Ewdt%3AP710%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20author%0A%20%20%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP1433%20%2F%20wdt%3AP4745%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%20AS%20%25people%20%20%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20%3Fprogramming_language%20%3Fperson%0A%20%20WHERE%20%7B%0A%20%20%20%20INCLUDE%20%25people%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP4510%20%3Fuse%20.%0A%20%20%20%20%3Fuse%20wdt%3AP31%2Fwdt%3AP279%2A%20wd%3AQ7397%20.%20%0A%20%20%20%20%3Fuse%20wdt%3AP277%20%3Fprogramming_language%20.%20%0A%20%20%20%20VALUES%20%3Fprogramming_language%20%7B%20wd%3AQ28865%20wd%3AQ206904%20%7D%20.%20%0A%20%20%7D%0A%7D%20AS%20%25results%0AWHERE%20%7B%0A%20%20INCLUDE%20%25results%0A%20%20BIND%28%22B5651D%22%20AS%20%3Frgb%29%0A%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%2Cda%2Cde%2Ces%2Cfr%2Cjp%2Cno%2Cru%2Csv%2Czh%22.%20%7D%0A%7D%0ALIMIT%20200%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+ <h3  class="title is-3">  Map of speaker affiliation (past and current) </h2>
+<iframe style="width: 80%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23%23%20tool%3A%20scholia%0A%23defaultView%3AMap%0A%23title%3A%20Map%20of%20speaker%20affiliation%20%28past%20and%20current%29%0APREFIX%20target%3A%20%3Chttp%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ116259311%3E%0A%0ASELECT%0A%20%20%3Fperson%20%3FpersonLabel%20%0A%20%20%3Faffiliation%20%3FaffiliationLabel%0A%20%20%3Fcoord%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20DISTINCT%20%3Fperson%0A%20%20WHERE%20%7B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20speaker%2C%20organizer%2C%20program%20committee%20member%0A%20%20%20%20%20%20target%3A%20wdt%3AP823%20%7C%20wdt%3AP664%20%7C%20wdt%3AP5804%20%3Fperson%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20participant%0A%20%20%20%20%20%20%3Fperson%20wdt%3AP1344%20%7C%20%5Ewdt%3AP710%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%20%20UNION%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%23%20author%0A%20%20%20%20%20%20%3Fperson%20%5Ewdt%3AP50%20%2F%20wdt%3AP1433%20%2F%20wdt%3AP4745%20target%3A%20.%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%20AS%20%25people%20%20%0AWITH%20%7B%0A%20%20SELECT%0A%20%20%20%20%3Fperson%20%0A%20%20%20%20%3Faffiliation%0A%20%20%20%20%3Fcoord%20%0A%20%20WHERE%20%7B%0A%20%20%20%20INCLUDE%20%25people%0A%20%20%20%20%3Fperson%20wdt%3AP108%20%7C%20wdt%3AP463%20%7C%20wdt%3AP1416%20%7C%20wdt%3AP69%20%3Faffiliation%20.%0A%20%20%20%20%3Faffiliation%20wdt%3AP625%20%3Fcoord%20.%20%0A%20%20%20%20%20%20%20%20%3Fperson%20rdfs%3Alabel%20%3FpersonLabel%20.%20%0A%20%20%20%20FILTER%28LANG%28%3FpersonLabel%29%3D%22en%22%29%0A%20%20%7D%0A%7D%20AS%20%25results%0AWHERE%20%7B%0A%20%20INCLUDE%20%25results%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0AORDER%20BY%20DESC%28%3Fnumber_of_persons%29%0ALIMIT%2010%0A" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+    
+    </div>
+    </div>
+    <div class="content has-text-centered">
+                <h4>
+                    Want to improve Wikidata-powered science dashboards?
+                </h4>
+                <ul style="display: inline-block; text-align: left">
+                    <li>
+                        Check Laura Dupuis'
+                        <a target="_blank" href="https://laurendupuis.github.io/Scholia_tutorial/">Tutorial</a>
+                        for beginners
+                    </li>
+                </ul>
+                <br>
+                <h4>Credits</h4>
+                <p>
+                    This content is available under a  <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/">  Creative Commons CC0</a> license. 
+
+                </p>
+                <p>
+                    SPARQL queries adapted from  <a target="_blank" href="https://scholia.toolforge.org/">Scholia</a>
+
+                </p>
+            </div>
+    </body>
+    
+    </html>
+    
+    
