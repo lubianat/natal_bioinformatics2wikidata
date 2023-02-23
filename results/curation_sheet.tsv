@@ -1,15 +1,19 @@
-"name","wikidata_id","wikidata_label","wikidata_description"
-"Joseph Carlson ","Q38524261","Joseph Carlson","researcher at Los Alamos National Lab (ORCID 0000-0002-3163-5565)"
-"Lucila Ohno","Q29840188","Lucila Ohno-Machado","researcher"
-"Serghei Mangul ","Q92901653","Serghei Mangul","researcher (ORCID 0000-0003-1453-1729)"
-"Alessandro de Mello Varani ","Q38545805","Alessandro Varani","researcher"
-"Alexandre Rossi Paschoal ","Q56321016","Alexandre Rossi Paschoal","researcher"
-"Ana Maria Benko Iseppon ","Q80618264","Ana Maria Benko-Iseppon","researcher"
-"Helder Takashi Imoto Nakaya ","Q42614737","Helder Nakaya","researcher"
-"Henrique Marques","Q37644398","Henrique Marques Junior","1881-"
-"Leonardo Capistrano Ferreira ","Q116259409","NONE","NONE"
-"Lucymara Agnez Lima ","Q44615668","Lucymara Fassarella Agnez-Lima","researcher"
-"Milton Yutaka Nishiyama Junior ","Q73939691","Milton Y Nishiyama","researcher"
-"Raquel C de Melo Minardi ","Q105481884","NONE","NONE"
-"Rodrigo Romão do Nascimento ","Q109716452","Rodrigo Romão do Nascimento","researcher"
-"Tirza Braz Petta ","Q62941137","NONE","NONE"
+name,wikidata_id,wikidata_label,wikidata_description
+Joseph Carlson ,Q29023137,Joseph Carlson,researcher at Los Alamos National Lab (ORCID 0000-0002-3163-5565)
+Lucila Ohno,Q29840188,Lucila Ohno-Machado,researcher
+Marco S Nobile ,Q56084664,Marco S. Nobile,researcher
+Serghei Mangul ,Q92901653,Serghei Mangul,researcher (ORCID 0000-0003-1453-1729)
+Alessandro de Mello Varani ,Q38545805,Alessandro Varani,researcher
+Alexandre Rossi Paschoal ,Q56321016,Alexandre Rossi Paschoal,researcher
+Ana Maria Benko Iseppon ,Q80618264,Ana Maria Benko-Iseppon,researcher
+Ana Tereza Ribeiro de Vasconcelos   ,Q38801050,Ana Tereza R Vasconcelos,researcher
+João Trindade Marques ,Q54378111,João T Marques,researcher
+Helder Takashi Imoto Nakaya ,Q42614737,Helder Nakaya,researcher
+Leonardo Capistrano Ferreira ,Q116259409,Leonardo Capistrano Ferreira,researcher at UFRN
+Lucymara Agnez Lima ,Q44615668,Lucymara Fassarella Agnez-Lima,researcher
+Marcel Ribeiro,Q116871507,Marcel Ribeiro,Portuguese footballer
+Milton Yutaka Nishiyama Junior ,Q73939691,Milton Y Nishiyama,researcher
+Raquel C de Melo Minardi ,Q105481884,Raquel Cardoso de Melo Minardi,Brazilian researcher
+Rodrigo Romão do Nascimento ,Q109716452,Rodrigo Romão do Nascimento,researcher
+Tetsu Sakamoto ,Q59093911,Tetsu Sakamoto,researcher
+Tirza Braz Petta ,Q62941137,Tirzah Braz Petta,researcher

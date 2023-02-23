@@ -22,6 +22,7 @@ loop = asyncio.get_event_loop()
 future = asyncio.ensure_future(
     run_multiple_searches(
         clean_names,
+        excluded_types=[],
         fixed_type="Q5",
     )
 )

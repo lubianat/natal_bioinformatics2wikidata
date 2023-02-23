@@ -7,13 +7,12 @@ RESULTS = HERE.parent.joinpath("results").resolve()
 
 
 def main():
-
     print(
         render_qs_url(
             add_speakers_to_event(
                 curated_sheet_path=RESULTS.joinpath("curation_sheet.tsv"),
                 event_id="Q116259311",
-                reference_url="https://web.archive.org/web/20230119145922/https://bioinfo.imd.ufrn.br/nbf/speakers",
+                reference_url="https://bioinfo.imd.ufrn.br/nbf/speakers",
             )
         )
     )
